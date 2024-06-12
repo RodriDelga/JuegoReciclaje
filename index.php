@@ -11,7 +11,7 @@
     <div id="Container">
         <header id="Still">
             <h1 id="title">Juego</h1>
-            <button id="btnInciar" type="submit"></button>
+            <button id="btnInciar" type="submit">Iniciar Juego</button>
         </header>
     </div>
 </body>
