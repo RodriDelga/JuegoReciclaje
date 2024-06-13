@@ -12,6 +12,7 @@
         <header id="Still">
             <h1 id="title">Cuida el Planeta</h1>
             <button id="btnInciar" type="submit">Iniciar Juego</button>
+            <p>Bienvenido a este juego de prueba</p>
         </header>
     </div>
 </body>
