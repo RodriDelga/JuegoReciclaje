@@ -76,13 +76,14 @@ body.no-cursor {
 
 .Botes-Container{
   display: flex;
-  flex-direction: column;
-  width: 1000px;
-  height: 700px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1450px;
+  height: 650px;
   background: #ccc;
 }
 
-.Basura2{
-  display: flex;
-  flex-direction: row-reverse;
+.Basura{
+  padding: 20px;
 }

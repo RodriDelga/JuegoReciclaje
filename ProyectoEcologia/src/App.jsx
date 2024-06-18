@@ -1,4 +1,4 @@
-import { FollowMouse } from "./componets/FollowMouse"
+import { FollowMouse } from "./components/FollowMouse"
 
 function App() {
 

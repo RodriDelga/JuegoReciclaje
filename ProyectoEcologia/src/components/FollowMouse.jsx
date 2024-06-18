@@ -51,7 +51,7 @@ export const FollowMouse = () => {
                 {enabled ? 'Desactivar' : 'Activar'} seguir puntero
             </button>
         </div>
-        <div className="Basura2">
+        <div className="Basura">
             <button onClick={() => setEnabled(!enabled)}>
                 {enabled ? 'Desactivar' : 'Activar'} seguir puntero
             </button>
