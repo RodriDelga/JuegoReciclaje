@@ -93,3 +93,11 @@ body.no-cursor {
   padding: 20px;
 }
 
+.main-section{
+  display: flex;
+  padding: 20px;
+}
+
+.main-text{
+  
+}
