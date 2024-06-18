@@ -5,6 +5,46 @@
   }
   
   .Main-header{
-    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
     background: #2a2a30;
   } 
+
+  .logo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo-img{
+    height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .Information{
+    display: flex;
+  }
+
+  .Info-Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 160px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .Info-Container:hover{
+    background: #33333b;
+    transition: .5s ease all;
+  }
+
+  .Info-Container .Who{
+    font-size: 20px;
+  }
+
+  
