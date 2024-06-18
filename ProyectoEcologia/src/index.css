@@ -1,3 +1,8 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -87,3 +92,4 @@ body.no-cursor {
 .Basura{
   padding: 20px;
 }
+
