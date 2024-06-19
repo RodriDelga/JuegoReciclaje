@@ -80,10 +80,8 @@ body.no-cursor {
 }
 
 .Botes-Container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 50% auto;
   width: 1450px;
   height: 650px;
   background: #ccc;
@@ -93,11 +91,27 @@ body.no-cursor {
   padding: 20px;
 }
 
-.main-section{
+.Botes-Basura{
   display: flex;
-  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: self-end;
 }
 
-.main-text{
-  
+.Bote{
+  width: 100px;
+  height: 100px;
+}
+
+.Objetos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Object{
+  width: 50px;
+  height: 50px;
+  background: #535bf2;
+  cursor: pointer;
 }

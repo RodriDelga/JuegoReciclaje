@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
-  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [position, setPosition] = useState({ x: 200, y: 400 })
   
     useEffect(() => {
       console.log('efecto', { enabled })
@@ -46,15 +46,27 @@ export const FollowMouse = () => {
       }} 
       />
       <div className="Botes-Container">
-        <div className="Basura">
-            <button onClick={() => setEnabled(!enabled)}>
-                {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-            </button>
+        <div className="Objetos">
+          <div className="Object">
+            Hola
+          </div>
         </div>
-        <div className="Basura">
-            <button onClick={() => setEnabled(!enabled)}>
-                {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-            </button>
+        <div className="Botes-Basura">
+          <div className="Basura">
+              <button className="Bote" onClick={() => setEnabled(!enabled)}>
+                  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+              </button>
+          </div>
+          <div className="Basura">
+              <button className="Bote" onClick={() => setEnabled(!enabled)}>
+                  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+              </button>
+          </div>
+          <div className="Basura">
+              <button className="Bote" onClick={() => setEnabled(!enabled)}>
+                  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+              </button>
+          </div>
         </div>
       </div>
     </>

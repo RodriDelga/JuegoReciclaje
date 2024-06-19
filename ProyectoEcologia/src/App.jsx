@@ -1,10 +1,10 @@
-import { PaginaPrincipal } from "./PaginaPrincipal"
+import { FollowMouse } from "./components/FollowMouse"
 
 function App() {
 
   return (
     <main>
-      <PaginaPrincipal /> 
+      <FollowMouse /> 
     </main>
   )
 }

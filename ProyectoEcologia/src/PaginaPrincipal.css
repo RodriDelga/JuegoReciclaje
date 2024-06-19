@@ -47,4 +47,15 @@
     font-size: 20px;
   }
 
-  
+  .main-section{
+    display: flex;
+    padding: 20px;
+    width: 1300px;
+    height: 600px;
+  }
+
+  .main-text{
+    display: flex;
+    justify-content: center;
+    width: 1300px;
+  }

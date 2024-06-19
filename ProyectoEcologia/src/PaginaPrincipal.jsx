@@ -2,6 +2,9 @@ import './PaginaPrincipal.css'
 
 export const PaginaPrincipal = () => {
     
+    const Juego = () => {
+        
+    }
 
     return (
         <div className="Main-Container">
@@ -24,7 +27,16 @@ export const PaginaPrincipal = () => {
             </header>
             <section className='main-section'>
                 <article className='main-text'>
-                    <h1>Bienvenido a nuestra pagina</h1>
+                    <div className='title'>
+                        <h1>Bienvenido a nuestra pagina</h1>
+                        <button onClick={Juego}>Ir al juego</button>   
+                    </div>
+                </article>
+                <article className='us-text'>
+
+                </article>
+                <article className='game-text'>
+
                 </article>
             </section>
         </div>
