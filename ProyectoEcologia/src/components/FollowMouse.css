@@ -1,0 +1,51 @@
+.Pantalla{
+    width: 1500px;
+    height: 700px;
+  }
+  
+  .Botes-Container{
+    display: grid;
+    grid-template-columns: 50% auto;
+    width: 1500px;
+    height: 565px;
+    background: #ccc;
+  }
+  
+  .Datos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 105px;
+    background: #213547;
+    cursor: no-drop;
+  }
+  
+  .Basura{
+    padding: 20px;
+  }
+  
+  .Botes-Basura{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-end;
+  }
+  
+  .Bote{
+    width: 100px;
+    height: 100px;
+  }
+  
+  .Objetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Object{
+    width: 50px;
+    height: 50px;
+    background: #535bf2;
+    cursor: cell;
+  }

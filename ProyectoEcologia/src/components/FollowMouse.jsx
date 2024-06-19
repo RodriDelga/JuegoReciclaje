@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import './FollowMouse.css'
 
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
@@ -30,6 +31,34 @@ export const FollowMouse = () => {
       }
     }, [enabled])
 
+    /*
+    const Timer = () => {
+      const [second, setSecond] = useState(0)
+      const [minute, setMinute] = useState(0)
+      
+      var timer;
+
+      useEffect(() => {
+        timer = setInterval(() => {
+
+          setSecond(second+1)
+
+          if(second===59){
+            setMinute(minute+1)
+            setSecond(0)
+            }
+
+          }, 1000)
+
+          return (
+            clearInterval(timer),
+            setSecond(0),
+            setMinute(0)
+          )
+        })
+    }
+    */
+
   return (
     <>
       <div style={{
@@ -45,29 +74,45 @@ export const FollowMouse = () => {
         transform: `translate(${position.x}px, ${position.y}px)`
       }} 
       />
-      <div className="Botes-Container">
-        <div className="Objetos">
-          <div className="Object">
-            Hola
+      <div className="Pantalla">
+        <div className="Botes-Container">
+          <div className="Objetos">
+            <div onClick={() => setEnabled(true)} className="Object">
+              Hola
+            </div>
+          </div>
+          <div className="Botes-Basura">
+            <div className="Basura">
+                <button className="Bote" onClick={() => setEnabled(false)}>
+                    {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+                </button>
+            </div>
+            <div className="Basura">
+                <button className="Bote" onClick={() => setEnabled(!enabled)}>
+                    {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+                </button>
+            </div>
+            <div className="Basura">
+                <button className="Bote" onClick={() => setEnabled(!enabled)}>
+                    {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+                </button>
+            </div>
           </div>
         </div>
-        <div className="Botes-Basura">
-          <div className="Basura">
-              <button className="Bote" onClick={() => setEnabled(!enabled)}>
-                  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-              </button>
+        <footer className="Datos">
+          <div className="Points">
+            <h3>Separa la Basura</h3>
+            <h4>Basura recogida: </h4>
+            <h4>Basura quemada: </h4>
+            <h4>Puntos: </h4>
           </div>
-          <div className="Basura">
-              <button className="Bote" onClick={() => setEnabled(!enabled)}>
-                  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-              </button>
+          <div className="Time">
+            <h4>Tiempo: </h4>
           </div>
-          <div className="Basura">
-              <button className="Bote" onClick={() => setEnabled(!enabled)}>
-                  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-              </button>
+          <div className="Camión">
+            <button>Subir la basura al camión</button>
           </div>
-        </div>
+        </footer>
       </div>
     </>
     
