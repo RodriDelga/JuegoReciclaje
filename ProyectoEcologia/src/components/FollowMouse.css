@@ -49,3 +49,29 @@
     background: #535bf2;
     cursor: cell;
   }
+
+  .no-object{
+    background: transparent;
+  }
+
+  .Inorganico{
+    width: 50px;
+    height: 50px;
+    background: #35398c;
+    cursor: cell;
+  }
+
+  .no-inorganico {
+    background: transparent;
+  }
+
+  .Organico{
+    width: 50px;
+    height: 50px;
+    background: #389e23;
+    cursor: cell;
+  }
+
+  .no-organico {
+    background: transparent;
+  }

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import { Inorganico } from "./Inorganico"
+import { Organico } from "./Organico"
 import './FollowMouse.css'
 
 export const FollowMouse = () => {
@@ -25,6 +27,7 @@ export const FollowMouse = () => {
 
     useEffect(() => {
       document.body.classList.toggle('no-cursor', enabled)
+      
 
       return () => {
         document.body.classList.remove('no-cursor')
@@ -63,7 +66,7 @@ export const FollowMouse = () => {
     <>
       <div style={{
         position: 'absolute',
-        backgroundColor: '#cf1515',
+        backgroundColor: '#35398c',
         border: '1px solid #fff',
         borderRadius: '50%',
         pointerEvents: 'none',
@@ -77,9 +80,8 @@ export const FollowMouse = () => {
       <div className="Pantalla">
         <div className="Botes-Container">
           <div className="Objetos">
-            <div onClick={() => setEnabled(true)} className="Object">
-              Hola
-            </div>
+            <Organico setEnabled={setEnabled} enabled={enabled}/>
+            <Inorganico setEnabled={setEnabled} enabled={enabled}/>
           </div>
           <div className="Botes-Basura">
             <div className="Basura">
