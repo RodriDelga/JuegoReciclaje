@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export const Organico = ({ enabled, setEnabled}) => {
     
     const Borrar = enabled ? 'no-organico' : 'Organico'
@@ -8,3 +10,10 @@ export const Organico = ({ enabled, setEnabled}) => {
         </div>
     )
 }
+
+Organico.propTypes = {
+    enabled: PropTypes.bool.isRequired,
+    setEnabled: PropTypes.bool.isRequired 
+};
+
+export default Organico;

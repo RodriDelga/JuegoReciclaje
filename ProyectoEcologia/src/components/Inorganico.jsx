@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 
 export const Inorganico = ({ enabled, setEnabled }) => {
 
@@ -10,3 +11,10 @@ export const Inorganico = ({ enabled, setEnabled }) => {
         
     )
 }
+
+Inorganico.propTypes = {
+    enabled: PropTypes.bool.isRequired,
+    setEnabled: PropTypes.bool.isRequired // Define que 'enabled' es un booleano requerido
+};
+
+export default Inorganico
