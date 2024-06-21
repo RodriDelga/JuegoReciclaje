@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react"
-import { Inorganico } from "./Inorganico"
-import { Organico } from "./Organico"
+import { Square } from "./Square.jsx"
+import { BoteOrganico } from "./BoteOrganico.jsx"
 import './FollowMouse.css'
 
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 200, y: 400 })
+  const [mostrar, setMostrar] = useState(false)
+
+    const [board, setBoard] = useState(() => {
+      return Array(140).fill( null)
+    })
   
     useEffect(() => {
       console.log('efecto', { enabled })
@@ -33,6 +38,21 @@ export const FollowMouse = () => {
         document.body.classList.remove('no-cursor')
       }
     }, [enabled])
+
+    useEffect(() => {
+      const newPosition = () =>{
+        setPosition({ x: 0 , y: 0})
+      }
+
+      if(mostrar){
+        window.addEventListener('pointermove',newPosition)
+      }
+
+      return () => {
+        console.log('cleanup')
+        window.removeEventListener('pointermove', newPosition)
+      }
+    }, [mostrar])
 
     /*
     const Timer = () => {
@@ -79,13 +99,21 @@ export const FollowMouse = () => {
       />
       <div className="Pantalla">
         <div className="Botes-Container">
-          <div className="Objetos">
-            <Organico setEnabled={setEnabled} enabled={enabled}/>
-            <Inorganico setEnabled={setEnabled} enabled={enabled}/>
-          </div>
-          <div className="Botes-Basura">
+          <section className="Objetos">
+          {
+            board.map((square, index) => {
+              return(
+                <Square key={index} index={index} enabled={enabled} setEnabled={setEnabled}/>
+              )
+            })
+          }
+          </section>
+          <section className="Botes-Basura">
             <div className="Basura">
-                <button className="Bote" onClick={() => setEnabled(false)}>
+                <BoteOrganico enabled={enabled} setEnabled={setEnabled}/>
+            </div>
+            <div className="Basura">
+                <button className="Bote" onClick={() => setMostrar(false) }>
                     {enabled ? 'Desactivar' : 'Activar'} seguir puntero
                 </button>
             </div>
@@ -94,12 +122,7 @@ export const FollowMouse = () => {
                     {enabled ? 'Desactivar' : 'Activar'} seguir puntero
                 </button>
             </div>
-            <div className="Basura">
-                <button className="Bote" onClick={() => setEnabled(!enabled)}>
-                    {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-                </button>
-            </div>
-          </div>
+          </section>
         </div>
         <footer className="Datos">
           <div className="Points">

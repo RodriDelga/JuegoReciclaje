@@ -6,7 +6,7 @@ export const Organico = ({ enabled, setEnabled}) => {
 
     return (
         <div onClick={() => setEnabled(true)} className={Borrar}>
-            <img src=""/>
+            
         </div>
     )
 }
