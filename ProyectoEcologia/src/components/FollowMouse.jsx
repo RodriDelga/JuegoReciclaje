@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { Square } from "./Square.jsx"
-import { BoteOrganico } from "./BoteOrganico.jsx"
+import { Square } from "./Game/Square.jsx"
+import { BoteOrganico } from "./Game/BoteOrganico.jsx"
 import './FollowMouse.css'
+import Organico from "./Game/Organico.jsx"
 
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
@@ -11,6 +12,15 @@ export const FollowMouse = () => {
     const [board, setBoard] = useState(() => {
       return Array(140).fill( null)
     })
+
+    const RandomObject = () => {
+      const min = 1;
+      const max = 140;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      const newBoard = [...board]
+      newBoard[randomNumber] = <Organico />
+      setBoard(newBoard)
+    }
   
     useEffect(() => {
       console.log('efecto', { enabled })

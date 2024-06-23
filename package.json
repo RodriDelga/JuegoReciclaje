@@ -16,5 +16,8 @@
     "extends": [
       "standard"
     ]
+  },
+  "dependencies": {
+    "mysql": "^2.18.1"
   }
 }

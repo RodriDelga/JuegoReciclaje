@@ -1,61 +1,202 @@
-.Main-Container{
-    background: #292828;
-    width: 1300px;
-    height: 750px;
-  }
-  
-  .Main-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 160px;
-    background: #2a2a30;
-  } 
+html{
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(152, 224, 177);
+}
+a {
+  text-decoration: none;
+}
+p{
+  color: black;
+  text-align: center;
+}
 
-  .logo{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
+.img{
+  width: 400px;
+  height: 200px;
+  display: flex;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+}
 
-  .logo-img{
-    height: 100px;
-    margin-right: 20px;
-    cursor: pointer;
-  }
+.cbtis {
+  width: 250px;
+  height: 200px;
+  padding: 15px;
+}
 
-  .Information{
-    display: flex;
-  }
+.Game {
+  margin-top: 15px;
+  transition: .5s ease all;
+}
 
-  .Info-Container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 160px;
-    font-size: 25px;
-    cursor: pointer;
-  }
+.Game:hover {
+  background: #31313a;
+  border: 2px solid #ccc;
+}
 
-  .Info-Container:hover{
-    background: #33333b;
-    transition: .5s ease all;
-  }
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  background-image: url("src/images/Tierra.png");
+  background-repeat: no-repeat;
+  background-size: 1550px 700px;
+}
 
-  .Info-Container .Who{
-    font-size: 20px;
-  }
+.hero h1 {
+  font-size: 150px;
+  color: rgb(0, 132, 0);
+  text-align: center;
+}
 
-  .main-section{
-    display: flex;
-    padding: 20px;
-    width: 1300px;
-    height: 600px;
-  }
+.Welcome {
+  color: rgb(51, 167, 51);
+  font-size: 80px;
+}
 
-  .main-text{
-    display: flex;
-    justify-content: center;
-    width: 1300px;
+h1{
+  color: rgb(14, 57, 28);
+  text-align: center;
+}
+
+.Escuela{
+  color:rgb(57, 93, 69);  
+  font-weight: 700;
+}
+
+.Escuela:hover {
+    color: #00541e;
+}
+
+.us {
+  padding: 10px;
+  color: #31313a;
+}
+
+.us-names {
+  color: #26262a;
+}
+
+.hero p {
+  font-size: 80px;
+  text-transform: uppercase;
+  color: green;
+}
+
+nav{
+  background: rgb(42, 176, 89);
+  width: 100%;
+  height: 80px;
+  box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;
+  display: flex;
+  /* esto se realiza para dejar pegadas las secciones y no desaparescan*/
+  position: sticky;
+  top: 0;
+  /*esto evita que se recorran pixeles la secciones esta funcion lo oculta */
+  overflow: hidden;
+}
+
+/*accede a cada uno de las secciones para separarlas*/
+nav a{
+  flex: 1;
+  height: 100%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(14, 57, 28);
+  transition: .6s ease-in-out all;
+  font-weight: 500;
+}
+
+.seccion {
+  min-height: 100vh;
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion .ca {
+  background: rgb(129, 228, 164);
+  height: 90%;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: rgba(111, 137, 115, 0.427) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Registro {
+  background: rgb(129, 228, 164);
+  height: 90%;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: rgba(111, 137, 115, 0.427) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.R-title {
+  margin-bottom: 15px;
+}
+
+.Registro .Entrada {
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 0px;
+  background: #82ba8e;
+  color: #26262a;
+  font-weight: 600;
+}
+
+nav a:hover{
+  background: #76ca89;
+  color: #00541e;
+}
+/*para tener una barras que indica la seccion */
+nav.indicador{
+  width: 0px;
+height: 7px;
+background: #113cfc;
+position: absolute;
+bottom: 0;
+transition: .3s ease-out all;
+/* transform: translate(-500px); */
+}
+/*esto sirve para adaptar el tamño de la ventana cuando se accede desde diferentes dispositivos*/
+@media  screen and (max-width: 800px) {
+  nav a{
+      font-size: 14px;
+      padding: 4px;
   }
+}
+@media screen and (max-width: 800px) {
+  nav a{
+      font-size: 12px;
+      
+  }
+}
