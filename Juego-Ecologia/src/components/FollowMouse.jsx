@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
-import { Square } from "./Game/Square.jsx"
-import { BoteOrganico } from "./Game/BoteOrganico.jsx"
+import { Square } from "./Square.jsx"
+import { BoteOrganico } from "./BoteOrganico.jsx"
 import './FollowMouse.css'
-import Organico from "./Game/Organico.jsx"
+import Organico from "./Organico.jsx"
 
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
-  const [position, setPosition] = useState({ x: 200, y: 400 })
+  const [position, setPosition] = useState({ x: 0, y: 0 })
   const [mostrar, setMostrar] = useState(false)
 
     const [board, setBoard] = useState(() => {
