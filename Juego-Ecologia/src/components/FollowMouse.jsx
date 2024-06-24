@@ -14,11 +14,13 @@ export const FollowMouse = () => {
     })
 
     const RandomObject = () => {
+      /*
       const min = 1;
       const max = 140;
       const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      */
       const newBoard = [...board]
-      newBoard[randomNumber] = <Organico />
+      newBoard[0] = <Organico />
       setBoard(newBoard)
     }
   
@@ -113,18 +115,20 @@ export const FollowMouse = () => {
           {
             board.map((square, index) => {
               return(
-                <Square key={index} index={index} enabled={enabled} setEnabled={setEnabled}/>
+                <Square key={index} index={index} enabled={enabled} setEnabled={setEnabled}>
+                  {square}
+                </Square>
               )
             })
           }
           </section>
           <section className="Botes-Basura">
             <div className="Basura">
-                <BoteOrganico enabled={enabled} setEnabled={setEnabled}/>
+                <BoteOrganico />
             </div>
             <div className="Basura">
-                <button className="Bote" onClick={() => setMostrar(false) }>
-                    {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+                <button className="Bote" onClick={RandomObject}>
+                    {mostrar ? 'Desactivar' : 'Activar'} seguir puntero
                 </button>
             </div>
             <div className="Basura">
