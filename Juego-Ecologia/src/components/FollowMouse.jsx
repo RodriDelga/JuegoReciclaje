@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Square } from "./Square.jsx"
 import { BoteOrganico } from "./BoteOrganico.jsx"
 import './FollowMouse.css'
-import Organico from "./Organico.jsx"
+import { Time } from "./Time.jsx"
 
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
@@ -13,20 +13,7 @@ export const FollowMouse = () => {
       return Array(140).fill( null)
     })
 
-    const RandomObject = () => {
-      /*
-      const min = 1;
-      const max = 140;
-      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-      */
-      const newBoard = [...board]
-      newBoard[0] = <Organico />
-      setBoard(newBoard)
-    }
-  
     useEffect(() => {
-      console.log('efecto', { enabled })
-        
       const handleMove = (event) => {
         const { clientX, clientY } = event
         setPosition({ x: clientX, y: clientY })
@@ -37,7 +24,6 @@ export const FollowMouse = () => {
       }
 
       return () => {
-        console.log('cleanup')
         window.removeEventListener('pointermove', handleMove)
       }
     }, [enabled])
@@ -57,7 +43,7 @@ export const FollowMouse = () => {
       }
 
       if(mostrar){
-        window.addEventListener('pointermove',newPosition)
+        window.addEventListener('pointermove', newPosition)
       }
 
       return () => {
@@ -66,33 +52,8 @@ export const FollowMouse = () => {
       }
     }, [mostrar])
 
-    /*
-    const Timer = () => {
-      const [second, setSecond] = useState(0)
-      const [minute, setMinute] = useState(0)
-      
-      var timer;
-
-      useEffect(() => {
-        timer = setInterval(() => {
-
-          setSecond(second+1)
-
-          if(second===59){
-            setMinute(minute+1)
-            setSecond(0)
-            }
-
-          }, 1000)
-
-          return (
-            clearInterval(timer),
-            setSecond(0),
-            setMinute(0)
-          )
-        })
-    }
-    */
+    
+    
 
   return (
     <>
@@ -123,11 +84,9 @@ export const FollowMouse = () => {
           }
           </section>
           <section className="Botes-Basura">
+            <BoteOrganico />
             <div className="Basura">
-                <BoteOrganico />
-            </div>
-            <div className="Basura">
-                <button className="Bote" onClick={RandomObject}>
+                <button className="Bote" >
                     {mostrar ? 'Desactivar' : 'Activar'} seguir puntero
                 </button>
             </div>
@@ -145,9 +104,7 @@ export const FollowMouse = () => {
             <h4>Basura quemada: </h4>
             <h4>Puntos: </h4>
           </div>
-          <div className="Time">
-            <h4>Tiempo: </h4>
-          </div>
+          <Time board={board} setBoard={setBoard}/>
           <div className="Camión">
             <button>Subir la basura al camión</button>
           </div>

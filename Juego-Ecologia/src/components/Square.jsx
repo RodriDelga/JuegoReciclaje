@@ -1,12 +1,11 @@
 
 import PropTypes from 'prop-types'
 
-export const Square = ({ enabled, setEnabled }) => {
-
+export const Square = ({ children, enabled, setEnabled, index }) => {
 
     return (
         <div className="square">
-            
+            {children}
         </div>
     )
 }
