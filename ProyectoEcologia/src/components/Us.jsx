@@ -10,11 +10,11 @@ export const Us = () => {
                 </p>
                 <h3 className='us'>El grupo esta conformado por: </h3>
                 <ul className='us-names'>
-                    <li>Alonso Hernadez</li>
+                    <li>Alonso Hernández</li>
                     <li>Rodrigo Delgado</li>
                     <li>Marlon Flores</li>
-                    <li>Luis Perez</li>
-                    <li>Joseph Godinez (Borre Borre)</li>
+                    <li>Luis Pérez</li>
+                    <li>Joseph Godínez (Borre Borre)</li>
                 </ul>
             </div>
         </div>

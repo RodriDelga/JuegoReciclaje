@@ -1,7 +1,6 @@
-
 import PropTypes from 'prop-types'
 
-export const Square = ({ children, enabled, setEnabled, index }) => {
+export const Square = ({ children }) => {
 
     return (
         <div className="square">
@@ -11,6 +10,5 @@ export const Square = ({ children, enabled, setEnabled, index }) => {
 }
 
 Square.propTypes = {
-    enabled: PropTypes.bool.isRequired,
-    setEnabled: PropTypes.bool.isRequired
+    children: PropTypes.node // Valida que children puede ser cualquier tipo de nodo de React
 }

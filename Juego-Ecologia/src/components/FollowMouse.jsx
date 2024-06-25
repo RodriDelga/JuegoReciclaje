@@ -84,9 +84,9 @@ export const FollowMouse = () => {
           }
           </section>
           <section className="Botes-Basura">
-            <BoteOrganico />
+            <BoteOrganico enabled={enabled} setEnabled={setEnabled}/>
             <div className="Basura">
-                <button className="Bote" >
+                <button className="Bote" onClick={() => setMostrar(false)}>
                     {mostrar ? 'Desactivar' : 'Activar'} seguir puntero
                 </button>
             </div>
@@ -104,7 +104,7 @@ export const FollowMouse = () => {
             <h4>Basura quemada: </h4>
             <h4>Puntos: </h4>
           </div>
-          <Time board={board} setBoard={setBoard}/>
+          <Time board={board} setBoard={setBoard} />
           <div className="Camión">
             <button>Subir la basura al camión</button>
           </div>
