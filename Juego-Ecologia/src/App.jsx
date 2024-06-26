@@ -1,4 +1,5 @@
-import './App.css'
+import './Styles/App.css'
+import './Styles/FollowMouse.css'
 import { FollowMouse } from './components/FollowMouse'
 
 function App() {

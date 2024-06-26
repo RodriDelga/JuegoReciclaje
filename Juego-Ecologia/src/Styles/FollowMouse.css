@@ -25,7 +25,12 @@
   .Points {
     height: 100px;
     display: flex;
-    
+    flex-direction: column;
+  }
+
+  .Point-Data {
+    padding: 0%;
+    margin: 0;
   }
   
   .Basura{
@@ -93,6 +98,37 @@
     width: 100px;
     height: 100px;
     background: #35398c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Bote-Inorganico {
+    width: 100px;
+    height: 100px;
+    background: #389e23;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Bote-Toxico {
+    width: 100px;
+    height: 100px;
+    background: #ba0d0d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Bolsa {
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+    background: black;
   }
 
   .square {

@@ -1,5 +1,11 @@
 import mysql from 'mysql'
 
+/**
+ * Esto se conecta a la base de datos pero
+ * no es tan importante ya que solo verifica
+ * la conexión y muestra datos de la tabla
+ */
+
 const conexion = mysql.createConnection({
     host: 'localhost',
     database: 'escuela',

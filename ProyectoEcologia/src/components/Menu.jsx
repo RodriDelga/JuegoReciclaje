@@ -2,6 +2,9 @@ export const Menu = () => {
 
     return (
         <nav id="menu">
+            {/**
+             * Esto es para cambiar la sección con las etiquetas <a />
+             */}
             <a href="#1">Cambio Climatico</a>
             <a href="#2">Desarrollo sostenible</a>
             <a href="#3">Biodiversidad</a>

@@ -1,17 +1,25 @@
 import { useEffect, useState } from "react"
 import { Square } from "./Square.jsx"
-import { BoteOrganico } from "./BoteOrganico.jsx"
-import './FollowMouse.css'
+import { BoteOrganico } from "./TrashCan/BoteOrganico.jsx"
 import { Time } from "./Time.jsx"
+import { BoteInorganico } from "./TrashCan/BoteInorganico.jsx"
+import { BoteToxico } from "./TrashCan/BoteToxico.jsx"
 
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [mostrar, setMostrar] = useState(false)
 
     const [board, setBoard] = useState(() => {
       return Array(140).fill( null)
     })
+
+    const updateBoard = (index) => {
+      if (board[index]===null) return
+      const newBoard = [...board]
+      newBoard[index]= null
+      setBoard(newBoard)
+      setEnabled(true)
+    }
 
     useEffect(() => {
       const handleMove = (event) => {
@@ -37,31 +45,12 @@ export const FollowMouse = () => {
       }
     }, [enabled])
 
-    useEffect(() => {
-      const newPosition = () =>{
-        setPosition({ x: 0 , y: 0})
-      }
-
-      if(mostrar){
-        window.addEventListener('pointermove', newPosition)
-      }
-
-      return () => {
-        console.log('cleanup')
-        window.removeEventListener('pointermove', newPosition)
-      }
-    }, [mostrar])
-
-    
-    
-
   return (
     <>
       <div style={{
         position: 'absolute',
         backgroundColor: '#35398c',
         border: '1px solid #fff',
-        borderRadius: '50%',
         pointerEvents: 'none',
         left: -25,
         top: -25,
@@ -76,7 +65,7 @@ export const FollowMouse = () => {
           {
             board.map((square, index) => {
               return(
-                <Square key={index} index={index} enabled={enabled} setEnabled={setEnabled}>
+                <Square key={index} index={index} updateBoard={updateBoard}>
                   {square}
                 </Square>
               )
@@ -84,25 +73,17 @@ export const FollowMouse = () => {
           }
           </section>
           <section className="Botes-Basura">
-            <BoteOrganico enabled={enabled} setEnabled={setEnabled}/>
-            <div className="Basura">
-                <button className="Bote" onClick={() => setMostrar(false)}>
-                    {mostrar ? 'Desactivar' : 'Activar'} seguir puntero
-                </button>
-            </div>
-            <div className="Basura">
-                <button className="Bote" onClick={() => setEnabled(!enabled)}>
-                    {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-                </button>
-            </div>
+            <BoteOrganico setEnabled={setEnabled}/>
+            <BoteInorganico setEnabled={setEnabled}/>
+            <BoteToxico setEnabled={setEnabled}/>
           </section>
         </div>
         <footer className="Datos">
           <div className="Points">
-            <h3>Separa la Basura</h3>
-            <h4>Basura recogida: </h4>
-            <h4>Basura quemada: </h4>
-            <h4>Puntos: </h4>
+            <h3 className="Point-Data">Separa la Basura</h3>
+            <h4 className="Point-Data">Basura recogida: </h4>
+            <h4 className="Point-Data">Basura quemada: </h4>
+            <h4 className="Point-Data">Puntos: </h4>
           </div>
           <Time board={board} setBoard={setBoard} />
           <div className="Camión">

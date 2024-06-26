@@ -6,14 +6,19 @@ import { Menu } from './components/Menu'
 import { Desarrollo } from './components/Desarrollo'
 import { Cambio } from './components/Cambio'
 import { Hero } from './components/Hero'
-import './App.css'
+import './Styles/App.css'
+
+/**
+ * Importamos todo lo necesario para que la pagina
+ * funcione
+ */
 
 function App() {
 
   return (
-    <main>
+    <main> {/* Los componentes deben estar unidos por algo, ya sea un main, div, nav, etc. */}
       <div className='Principal'>
-            <Hero />
+            <Hero /> {/* Esto es un componente, como pueden ver están regados por todo este compoenete */}
 
             <Menu />
 
