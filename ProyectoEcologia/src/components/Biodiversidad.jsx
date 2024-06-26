@@ -4,7 +4,7 @@ export const Bio = () => {
         <div className="seccion" id="3">
             <div className="ca">
                 <h1>La biodiversidad</h1>
-                <img className='img' src="src/images/3.jpeg" alt="" />
+                <img className='img' src="src/images/3.webp" alt="" />
                 <p>La biodiversidad del planeta está en juego. El cambio climático
                 se considera una de las cinco presiones principales que impulsan
                 la pérdida de la biodiversidad en el mundo, junto con la pérdida

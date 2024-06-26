@@ -4,7 +4,7 @@ export const Cambio = () => {
         <div className="seccion" id="1">
             <div className="ca">
                 <h1>El cambio climatico</h1>
-                <img className="img" src="src/images/1.jpg"/>
+                <img className="img" src="src/images/1.webp"/>
                 <p>El cambio climático hace referencia a los cambios
                 a largo plazo de las temperaturas y los patrones climáticos.
                 Estos cambios pueden ser naturales, pero desde el siglo XIX, 

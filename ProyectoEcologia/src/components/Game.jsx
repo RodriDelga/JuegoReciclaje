@@ -25,7 +25,7 @@ export const Game = () => {
         <div className="seccion" id="5">
             <div className="ca">
                 <h1>Videojuego</h1>
-                <img className='img' src="src/images/Tierra.png" alt="" />
+                <img className='img' src="src/images/Tierra.webp" alt="" />
                 <h4 className="text-unity">Ahora que llegamos a estar parte, que es la que muchos esperarian, mostraremos el 
                 juego que hemos estado haciendo como parte de este proyecto, en total son dos, uno
                 se comenzo a crear en Unity y otro en la web, comenzemos por el de Unity</h4>
@@ -36,11 +36,11 @@ export const Game = () => {
                 <div style={{
                     width: '600px',
                     height: '400px',
-                    backgroundImage: `url('src/images/Unity${change}.jpg')`,
+                    backgroundImage: `url('src/images/Unity${change}.webp')`,
                     backgroundSize: 'cover',
                 }} className="Unity-images">
-                    <button onClick={Back} className="next"><img className="img-next" src="src/images/back.png"/></button>
-                    <button onClick={Next} className="next" ><img className="img-next" src="src/images/next.png"/></button>
+                    <button onClick={Back} className="next"><img className="img-next" src="src/images/back.webp"/></button>
+                    <button onClick={Next} className="next" ><img className="img-next" src="src/images/next.webp"/></button>
                 </div>
                 <h4 className="text-unity">Sin embargo, por problemas de tiempo no llegamos a terminar el proyecto por lo que se quedo en etapas
                     muy tempranas de desarrollo, y en el otro juego tambien fue el mismo caso pero el link de ese juego esta

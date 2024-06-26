@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react"
-import { Organico } from './Organico'
-import { Inorganico } from './Inorganico'
+import { Organico } from './Trash/Organico'
+import { Inorganico } from './Trash/Inorganico'
 import { format } from "mysql"
-import { Toxic } from "./Toxic"
+import { Toxic } from "./Trash/Toxic"
 import PropTypes from 'prop-types'
 
 export const Time = ({ board, setBoard }) => {

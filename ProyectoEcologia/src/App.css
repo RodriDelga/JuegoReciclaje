@@ -49,7 +49,7 @@ p{
   align-items: center;
   justify-content: center;
   height: calc(100vh - 80px);
-  background-image: url("src/images/Tierra.png");
+  background-image: url("src/images/Tierra.webp");
   background-repeat: no-repeat;
   background-size: 1550px 700px;
 }

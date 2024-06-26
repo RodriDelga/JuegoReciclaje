@@ -4,7 +4,7 @@ export const Us = () => {
         <div className="seccion" id="4">
             <div className="ca">
                 <h1>¿Quiénes somos?</h1>
-                <img className='cbtis' src="src/images/CBTis49.png" alt="" />
+                <img className='cbtis' src="src/images/CBTis49.webp" alt="" />
                 <p>Somos un grupo de estudiantes del <a className='Escuela' href='http://cbtis49.edu.mx/'>CBTis 49 </a> 
                 que hicimos este proyecto por parte de la escuela.
                 </p>
