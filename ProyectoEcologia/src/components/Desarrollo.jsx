@@ -5,7 +5,7 @@ export const Desarrollo = () => {
             <div className="ca">
                 <h1>¿Que es el desarrollo sostenible?</h1>
                 <img className='img' src="src/images/2.webp" />
-                {<p>Las expresiones desarrollo sostenible, desarrollo sustentable y
+                <p className="Eco-Text">Las expresiones desarrollo sostenible, desarrollo sustentable y
                     desarrollo perdurable se aplican al principio organizador para
                     alcanzar los objetivos de desarrollo humano y al mismo tiempo
                     sostener la capacidad de los sistemas naturales de proporcionar
@@ -19,7 +19,7 @@ export const Desarrollo = () => {
                     como el desarrollo que satisface las necesidades del presente
                     sin comprometer la capacidad de las generaciones futuras para
                     satisfacer las suyas propias. 
-                </p>}
+                </p>
             </div>
         </div>
     )

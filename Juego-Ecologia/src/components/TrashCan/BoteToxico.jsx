@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
-export const BoteToxico = ({ setEnabled }) => {
+export const BoteToxico = ({ setEnabled, setSelected }) => {
 
     return (
         <div className="Basura">
-            <button className="Bote-Toxico" onClick={() => setEnabled(false)}>
+            <button className="Bote-Toxico" onClick={() => { setEnabled(false); setSelected(false)}}>
                 <div className='Bolsa' />
             </button>
         </div>
@@ -12,5 +12,6 @@ export const BoteToxico = ({ setEnabled }) => {
 }
 
 BoteToxico.propTypes = {
-    setEnabled: PropTypes.func.isRequired
+    setEnabled: PropTypes.func.isRequired,
+    setSelected: PropTypes.func
 };

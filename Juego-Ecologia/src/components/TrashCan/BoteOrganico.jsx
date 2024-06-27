@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types'
 
-export const BoteOrganico = ({ setEnabled }) => {
+export const BoteOrganico = ({ setEnabled, setSelected }) => {
 
     return (
         <div className="Basura">
-            <button className="Bote-Organico" onClick={() => setEnabled(false) }>{/* Esto hace una función que manda setEnabled igual a false para cambiar su valor y deje de seguir el cursor */}
+            <button className="Bote-Organico" onClick={() => { setEnabled(false); setSelected(false)}}>
                 <div className='Bolsa' />
             </button>
-            {/* Se ejecutara lo mismo con los otros dos botes */}
         </div>
     )
 }
 
 BoteOrganico.propTypes = {
-    setEnabled: PropTypes.func.isRequired // Define PropTypes para setEnabled
+    setEnabled: PropTypes.func.isRequired, // Define PropTypes para setEnabled
+    setSelected: PropTypes.func
 };
